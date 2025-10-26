@@ -12,80 +12,53 @@
 
  <style>
   body {
-    background-image: url('background.png');
-    background-size: cover;
-    background-position: center;
+    margin: 0;
+    height: 100vh;
+    background: #f3f5f7;
     display: flex;
-    flex-direction: column; /* Para que el botón quede debajo */
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
   }
 
-  .welcome-box {
-    background-color: #ffffff;
-    border: 2px solid #dcdcdc;
-    border-radius: 30px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    width: 1000px;
-    padding: 20px;
+  .miiverse-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 900px;          /* Más ancho */
+    height: 500px;         /* Más largo */
+    max-width: 95%;
+    padding: 40px;
     text-align: center;
-    animation: fadeIn 0.8s ease;
-    padding: 140px 125px;
-    margin-top: 50px;
-    margin-left: 100px;
+    animation: pop 0.3s ease;
+    overflow: auto;        /* por si el contenido se pasa del tamaño */
   }
 
-  .welcome-box h1 {
-    margin: 0 0 20px;
-    font-size: 50px;
-    color: #ff000d;
-    margin-top: -130px;
-
+  @keyframes pop {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
+</style>
+</head>
+<body>
 
-  .welcome-box p {
-    margin: 10px 0;
-    font-size: 25px;
-    color: #555;
-    line-height: 1.6;
-    margin-top: -5px;
-  }
+<div class="miiverse-card">
+  <h1>Welcome to Makiiverse!</h1>
+   <h1>Welcome to Makiiverse, this is a revival
+   <p>developement by makii01
+ </h1>
+</div>
 
-
-
-  .miiverse-next-btn:hover {
-    background-color: #f7f7f7;
-    transform: translateY(2px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    width: -40px;
-  }
-
-  .miiverse-next-btn:active {
-    transform: translateY(3px);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
-
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
- </style>
- </head>
- <body>
-
-  <!-- Recuadro principal -->
-  <div class="welcome-box">
-    <h1>Welcome To Makiiverse!</h1>
-    <p>Miiverse is a gaming community that connects people</p>
-    <p>from all over the world using Mii characters!</p>
-    <img src="src/mkisleep.png">
-  </div>
+ <div class="miiverse_message"         >
 
 
-
+ </div>
  
- </html>
+</body>
+</body>
