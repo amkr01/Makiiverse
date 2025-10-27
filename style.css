@@ -1,16 +1,9 @@
-.miiverse-card {
 
- color: rgba(255, 123, 0, 0.726);
 
-}
-
-.makii {
+.mii {
  position: fixed;
 margin-left: 500px;
+width: 1000px;
 
 }
 
-.world {
-width: 550px;
- margin-top: 10px;
-}
