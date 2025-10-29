@@ -1,0 +1,674 @@
+.shadow {
+  width: 1000px;
+  margin-right: -800px;
+  
+  
+  
+  }
+  .borde {
+  margin-top: -250px;
+
+  
+  
+  
+  }
+  
+  .communities {
+    max-width: 1200px; /* No se estira demasiado en pantallas grandes */
+    margin: auto; /* Centra el contenido */
+  }
+  
+  .usericonformii {
+    display: block;
+    margin-top: -110px;
+    width: 205px;
+    margin-right: 70px;
+}
+  
+.feed {
+   display: block;
+   margin-top: -0px;
+   width: 205px;
+  
+}
+
+.region {
+width: 700px;
+margin-left: 350px;
+margin-top: -120px;
+display: block;
+  }
+  
+.communites {
+   display: block;
+   margin-top: ;
+   margin-top: -10;
+  width: 205px;
+  
+}
+
+
+  
+.message_wiiu {
+    display: block;
+    width: 205px;
+  }
+  
+  .notifications {
+   margin-left: 0px;
+    width: 205px;
+  }
+  
+  .back {
+  
+    display: block;
+    margin: -20px;
+    width: 205px;
+    margin-top: -15px;
+    margin-left: 0px;
+  }
+  
+  .se{
+   margin-left: 1390px;
+  width: 200px;
+  margin-top: 600px;
+  }
+  
+  .todos {
+    position: fixed;
+  
+  
+  }
+  
+  .fixed-images {
+    position: fixed;
+    top: 50px; /* Ajusta la posición vertical */
+    left: 50px; /* Ajusta la posición horizontal */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  
+  .barra {
+  display: block;
+  margin-top: -770px;
+  width: 390px;
+  margin-left: 10px;
+  }
+  
+  .favorites {
+  width: 550px;
+  margin-left: 1182px;
+  margin-top: -100px;
+  display: block;
+  position: absolute;
+  }
+  
+ .community {
+  margin-left: 230px;
+  margin-top: 300px;
+  width: 1300px;
+ }
+
+ .filter {
+ margin-left: 1080px;
+ margin-top: -70px;
+display: block;
+ width: 250px;
+
+  
+ }
+
+
+  .wiu {
+  
+  width: 170px;
+  margin-left: 1350px;
+  margin-top: -100px;
+  display: block;
+  
+  
+  }
+  
+  
+  
+  .but {
+    width: 500px;
+    margin-left: 1000px;
+    margin-top: -500px;
+    display: block;
+  }
+  
+  
+  .mk8 {
+  margin-top: 50px;
+  width: 151px;
+  margin-left: 255px;
+  border-radius: 25px;
+  
+  }
+  
+  .icon_tag {
+  
+  margin-top: -190px;
+  
+  }
+  
+  .amke01 {
+  margin-top: -150px;
+  margin-left: 430px;
+
+  }
+  
+  .news {
+  
+  margin-left: 210px;
+  width: 1800px;
+  margin-top: 300px;
+  display: block;
+  }
+  
+  .miiverse {
+  display: block;
+  margin-left: 400px;
+  width: 1000px;
+  margin-top: -110px;
+  
+  }
+  
+  .filter_button {
+  width: 250px;
+  margin-left: 1250px;
+  margin-top: 45px;
+  
+  }
+  
+  .wii_u {
+  display: block;
+    width: 200px;
+    margin-top: -1150px;
+    margin-left: 1300px;
+  }
+  
+  .spoth{
+    width: 250px;
+    border-radius: 25px;
+    margin-left: 230px;
+    margin-top: -1130px;
+    display: block;
+    border-radius: 30px;
+  }
+  
+   .sh{
+    width: 140px;
+    margin-left: 840px;
+    border-radius: 25px;
+    margin-top: -140px;
+    display: block;
+  }
+ 
+
+  .sp{
+    width: 140px;
+    margin-left: 680px;
+    border-radius: 25px;
+    margin-top: -140px;
+    display: block;
+  
+  }
+  
+  .sn{
+    width: 140px;
+    margin-left: 520px;
+    border-radius: 25px;
+    margin-top: -120px;
+    display: block;
+  }
+  
+  
+  
+  .wp{
+    width: 140px;
+    margin-left: 1160px;
+    border-radius: 25px;
+    margin-top: -140px;
+    display: block;
+  
+  }
+  
+  .meme{
+    width: 140px;
+    margin-left: 1000px;
+    border-radius: 25px;
+    margin-top: -140px;
+    display: block;
+  
+  
+  
+  }
+  
+  
+  .cam{
+  width: 50px;
+  margin-left: 200px;
+  margin-top: -110px;
+  
+  }
+  
+  .se {
+  position: fixed;
+  
+  }
+  
+  
+  body {
+    cursor: url('/ruta/al/frame.png'), auto;
+  }
+  
+  #gamepad-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: limegreen;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+  }
+  
+  .contenedor {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .img {
+    display: block;
+    width: 40%;
+    border-radius: 10px;
+  }
+  
+  .contenedor {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .contenedor {
+    display: block;
+    width: 10%;
+    border-radius: 10px;
+  }
+  
+  .invisible {
+    display: flex;
+  align-items: center;
+  gap: 9px;
+  border-bottom: 6px dashed #aaaaaa;
+  border-radius: 10px;
+  padding: 90px 300px;
+  margin-top: -115px;
+  width: 400px;
+  height: 90px; /* ajusta la altura para que no sea tan alto */
+  text-decoration: none;
+ margin-left: 250px;
+
+  transition: transform 0.2s ease;
+  margin-bottom: 620px;
+
+}
+
+.shantae {
+ margin-left: 890px;
+ margin-top: -50px;
+ display: block;
+ width: 145px;
+ border-radius: 25px;
+}
+
+.texto {
+ margin-top: -1070px;
+ margin-left: 300px;
+ display: block;
+ width: 100px;
+
+}
+
+
+
+
+  
+.linkas{
+ margin-left: 1000px;
+ width: 200px;
+
+}
+
+
+
+
+.splatoon {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+  
+.shantae{
+    background-color: #000000;
+  }
+  
+
+
+.barra-opciones {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    padding: 1px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .barra-opciones button {
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+  
+  }
+  
+  .txt {
+
+margin-left: 300px;
+margin-top: -1300px;
+
+  }
+  
+  .contenedor{
+    width: 200px;
+    margin-left: 1300px;
+    margin-top:70px;
+    display: block;
+    
+    }
+    
+  .barra-opciones {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .contenedor:hover .barra-opciones {
+    opacity: 1;
+ }
+  
+  
+  
+  .miib {
+  width: 900px;
+  margin-top: 100px;
+  margin-left: 400px;
+  
+}
+  
+.mk8_txt{
+     margin-left: 430px;
+     display: block;
+     text-align: 200px;
+     margin-top: -150px;
+}
+
+.Wu {
+ width: 400px;
+ margin-left: 1600px;
+ position: static; /* o no pongas position */
+ margin-top: 100;
+ position: absolute;
+  display: block;
+
+}
+
+.usericonformii: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+.feed {
+  filter: drop-shadow(0 4px 6px rgb(238, 236, 236));
+}
+  
+  .splatoon {
+margin-top: 1100px;
+margin-left: 500px;
+
+  }
+  
+  .banner2 {
+margin-left: 835px;
+margin-top: -118px;
+display: block;
+width: 900px;
+  }
+  
+  @font-face {
+    font-family: 'MiiverseSymbols';
+    src: url('MiiverseSymbols-Regular%20.ttf') format('truetype');
+  }
+  
+  body {
+    font-family: 'MiiverseSymbols', sans-serif;
+  }
+ .plat {
+margin-left: 450px;
+
+ }
+  
+
+
+
+
+
+
+  ----------------------------------------------------------------------------------------------
+.image-right {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+  
+  
+.imagen-derecha {
+  
+  margin-right: 100px;
+  float: right
+  }
+  
+  
+  
+  .img-1  {
+    width: 200px;
+    margin-right: 3%;
+  
+  }
+  
+  
+  
+  
+  
+  .box{
+  
+      background-image: url(../img/background.png);
+    
+    
+    }
+    
+    .lilita-one-regular {
+      font-family: "Lilita One", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    
+    
+    .wiiu{
+      
+      margin-top: 200px;
+       width: 200px;
+    
+    }
+    
+    
+    
+    
+    body{
+        margin: 0;
+        padding: 0;
+        background: url(/img/background.png);   
+        background-size: cover;
+        background-position: center;
+        font-family: sans-serif;
+    }
+    
+    .sec-1 {
+        text-align: unset;
+       display: contents;
+       width: 2000%;
+    
+    
+      }
+    
+    
+    /*base*/
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      margin: 3.5rem 0 0 0;
+      font-family: "'NintendoNTLG", sans-serif;
+      font-size: 2rem;
+      background: linear-gradient(90deg, #000000 0%, #08174a 50%);
+      color: #000000;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: #000000;
+      font-display: 600;
+    }
+    
+    ul {
+      list-style: none;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    button,
+    input {
+      border: none;
+      outline: none;
+    }
+    
+    button {
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+      font-size: 0.938rem;
+    }
+    
+    /*reutilisabes*/
+    .section {
+      padding: 4.5rem 0 2rem;
+    }
+    
+    .sectiontitle {
+      font-size: 2.25rem !important;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .container {
+      max-width: 968px;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+    
+    .grid {
+      display: grid;
+    }
+    
+    .main {
+      overflow: hidden;
+    }
+    
+    body {
+        
+       background-image: url(/img/background.png)   
+     
+      
+    }
+
+.users{
+margin-left: 380px;
+margin-top: 40px;
+width: 1200px;
+border-radius: 25px;
+
+
+
+}
+
+.ejs {
+
+ margin-left: 1060px;
+ margin-top: -796px;
+
+
+}
+
+
+
+
+.wiiiu{
+width: 200px;
+margin-left: 1400px;
+margin-top: -350px;
+display: block;
+
+
+}
+
+.commun {
+ display: flex;
+  align-items: center;
+  gap: 9px;
+  border-bottom: 6px dashed #aaaaaa;
+  border-radius: 10px;
+  padding: 90px 350px;
+  margin-top: -125px;
+  width: 400px;
+  height: 90px; /* ajusta la altura para que no sea tan alto */
+  text-decoration: none;
+ margin-left: 870px;
+
+
+}
+
+.tag {
+
+
+ margin-left: 1050px;
+  margin-top: -50px;
+  display: block;
+
+}
