@@ -16,7 +16,8 @@
 
 .back {
  position: fixed;
- margin-top: -45px;
+ margin-top: -65px;
+ margin-right: 10px;
 
 }
 
@@ -53,8 +54,8 @@ margin-top: 70px;
 }
 
 .next {
-margin-left: 1400px;
-margin-top: 430px;
+margin-left: 1430px;
+margin-top: 410px;
 
 }
 
