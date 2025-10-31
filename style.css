@@ -14,7 +14,11 @@
     font-family: sans-serif;
 }
 
+.back {
 
+margin-top: -100px;
+
+}
 
 
 .welcome {
@@ -50,7 +54,7 @@ margin-top: 70px;
 
 .next {
 margin-left: 1400px;
-margin-top: 360px;
+margin-top: 260px;
 
 }
 
