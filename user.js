@@ -7,6 +7,6 @@ auth.onAuthStateChanged(user => {
         document.getElementById("mii-img").src = data.mii_url;
       });
     } else {
-      window.location.href = "user.html"; // Si no hay login
+      window.location.href = "user.html"; 
     }
   });

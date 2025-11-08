@@ -3,15 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Makiiverse</title>
 
 <style type="text/css">
 body {
   background-image: url('background.png');
-  background-size: cover;
-  background-color: #ffffff;
   font-family: 'Lilita One', Arial, sans-serif;
-  text-align: center;
   color: #222222;
 }
 
@@ -21,18 +19,18 @@ body {
 
 .section.active {
   display: block;
+  
 }
 
 .miiverse-card {
   background: #ffffff;
   border-radius: 20px;
   box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
-  width: 550px;
+  width: 450px;
   height: 240px;
   max-width: 65%;
   padding: 70px;
   margin: 90px auto;
-  text-align: center;
   margin-top: 30px;
  
 }
@@ -41,7 +39,7 @@ body {
   width: 150px;
   cursor: pointer;
   margin-left: 650px;
-  margin-top: -160px;
+  margin-top: 190px;
 }
 </style>
 </head>
@@ -52,10 +50,8 @@ body {
 <div id="welcome-section" class="section active">
   <div class="miiverse-card">
     <h1>Welcome to Makiiverse!</h1>
-    <img src="img/welcome1.png" alt="Welcome" class="word">
     <h2>Makiiverse will be a fun server!</h2>
     <img src="img/Next.png" alt="Next" class="next" onclick="showSection('info-section')">
-
   </div>
  
 </div>
@@ -68,9 +64,19 @@ body {
     <img src="img/back.png" alt="Back" class="back" onclick="showSection('welcome-section')">
   </div>
 </div>
+ <img src="img/icon.png" class="icon">
+ <style>
+  .icon {
+   margin-top: -500px;
+   width: 120px;
+   position: fixed;
+   margin-left: 350px;
+  } 
+ </style>
+    
+
 
 <script type="text/javascript">
-// Código compatible con Wii U
 function showSection(id) {
   var sections = document.getElementsByClassName('section');
   for (var i = 0; i < sections.length; i++) {
@@ -79,6 +85,22 @@ function showSection(id) {
   document.getElementById(id).className = 'section active';
 }
 </script>
+
+ <div class="exit">
+  <a href="javascript:window.close();">
+  <img src="img/exit.png" class="exit" alt="exit">
+  </a>
+ </div>
+
+ <style>
+ .exit {
+    width: 150px;
+   cursor: pointer;
+   margin-left: 250px;
+   margin-top: -40px;
+ }
+
+ </style>
 
 </body>
 </html>
