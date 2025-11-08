@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Makiiverse</title>
 
 <style type="text/css">
@@ -13,8 +14,12 @@ body {
   font-family: 'Lilita One', Arial, sans-serif;
   text-align: center;
   color: #222222;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
+/* Secciones */
 .section {
   display: none;
 }
@@ -23,22 +28,64 @@ body {
   display: block;
 }
 
+/* Tarjeta central estilo Miiverse */
 .miiverse-card {
   background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
-  width: 950px;
-  height: 550px;
-  max-width: 95%;
-  padding: 70px;
-  margin: 90px auto;
+  border-radius: 25px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.18);
+  width: 650px;
+  height: 380px;
+  padding: 40px;
+  margin: 40px auto 0 auto;
   text-align: center;
-  overflow: auto;
+  position: relative;
 }
 
-.next, .back {
+/* Texto dentro del recuadro */
+.miiverse-card h1 {
+  color: #2cb32c;
+  font-size: 28px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.miiverse-card p {
+  font-size: 20px;
+  line-height: 1.5em;
+  color: #333333;
+  padding: 0 10px;
+}
+
+/* Icono dentro del recuadro */
+.icon {
+  display: block;
+  margin: 20px auto 0 auto;
+  width: 450px;
+}
+
+/* Botones táctiles grandes */
+.next, .back, .exit {
   width: 150px;
   cursor: pointer;
+}
+
+/* Posiciones tipo Wii U */
+.next {
+  position: fixed;
+  right: 80px;
+  bottom: 45px;
+}
+
+.back {
+  position: fixed;
+  right: 80px;
+  bottom: 45px;
+}
+
+.exit {
+  position: fixed;
+  left: 80px;
+  bottom: 45px;
 }
 </style>
 </head>
@@ -49,33 +96,29 @@ body {
 <div id="welcome-section" class="section active">
   <div class="miiverse-card">
     <h1>Welcome to Makiiverse!</h1>
-    <img src="img/welcome1.png" alt="Welcome" class="word">
-    <h2>Makiiverse will be a fun server!</h2>
-    <img src="img/Next.png" alt="Next" class="next" onclick="showSection('info-section')">
+    <p>
+      Makiiverse is an online service that connects people from all over the world using Mii characters.<br><br>
+      Using Makiiverse, you can share your gaming experiences with the world in all kinds of ways!
+    </p>
+    <img src="img/welcome1.png" class="icon" alt="Miis around Earth">
   </div>
+
+  <a href="javascript:window.close();">
+    <img src="img/exit.png" class="exit" alt="Exit">
+  </a>
+  <img src="img/Next.png" alt="Next" class="next" onclick="showSection('info-section')">
 </div>
 
 <!-- Pantalla 2 -->
 <div id="info-section" class="section">
   <div class="miiverse-card">
     <h1>About Makiiverse</h1>
-    <p>This is the next screen! You can add more content or connect to your API here.</p>
-    <img src="img/back.png" alt="Back" class="back" onclick="showSection('welcome-section')">
+    <p>
+      This is the next screen! You can add more content here — maybe info about how your service connects users, or your API intro.
+    </p>
   </div>
+  <img src="img/back.png" alt="Back" class="back" onclick="showSection('welcome-section')">
 </div>
-
-</div>
- <img src="img/icon.png" class="icon">
- <style>
-  .icon {
-   margin-top: -500px;
-   width: 120px;
-   position: fixed;
-   margin-left: 350px;
-  } 
- </style>
-    
-
 
 <script type="text/javascript">
 function showSection(id) {
@@ -86,22 +129,6 @@ function showSection(id) {
   document.getElementById(id).className = 'section active';
 }
 </script>
-
- <div class="exit">
-  <a href="javascript:window.close();">
-  <img src="img/exit.png" class="exit" alt="exit">
-  </a>
- </div>
-
- <style>
- .exit {
-    width: 150px;
-   cursor: pointer;
-   margin-left: 250px;
-   margin-top: -40px;
- }
-
- </style>
 
 </body>
 </html>
