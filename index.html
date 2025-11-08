@@ -1,95 +1,85 @@
-<body style="background-image: url('background.png');"></body>
 <!DOCTYPE html>
 <html lang="en">
-<head> <head><meta charset="UTF-8"></head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/miiverse.png" type="image/x-icon">
-    <link rel="stylesheet" href="ccs/swiper-bundle.main.ccs">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-  <title>Welcome to miiverse</title>
-
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Makiiverse</title>
 
 <style>
+body {
+  background-image: url('background.png');
+  background-size: cover;
+  font-family: 'Lilita One', sans-serif;
+  text-align: center;
+  color: #222;
+}
 
-  .miiverse-card {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    width: 1000px;          /* Más ancho */
-    height: 550px;         /* Más largo */
-    max-width: 95%;
-    padding: 70px;
-    margin-left: 280px;
-    margin-top: 90px;
-    text-align: center;
-    animation: pop 0.3s ease;
-    overflow: auto;        /* por si el contenido se pasa del tamaño */
-  }
+.section {
+  display: none;
+}
 
-  @keyframes pop {
-    from {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
+.section.active {
+  display: block;
+  animation: fade 0.3s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.miiverse-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 950px;
+  height: 550px;
+  max-width: 95%;
+  padding: 70px;
+  margin: 90px auto;
+  text-align: center;
+  overflow: auto;
+}
+
+.next, .back {
+  width: 150px;
+  transition: 0.2s;
+}
+
+.next:hover, .back:hover {
+  transform: scale(1.05);
+}
 </style>
 </head>
+
 <body>
 
-<div class="miiverse-card">
-     <h1></h1>
+<!-- 🔹 Sección 1 -->
+<div id="welcome-section" class="section active">
+  <div class="miiverse-card">
+    <h1>Welcome to Makiiverse!</h1>
+    <img src="img/welcome1.png" class="word">
+    <h2>Makiiverse will be a fun server</h2>
+    <img src="img/Next.png" class="next" alt="Next" onclick="showSection('info-section')">
+  </div>
 </div>
+
+<!-- 🔹 Sección 2 -->
+<div id="info-section" class="section">
+  <div class="miiverse-card">
+    <h1>About Makiiverse</h1>
+    <p>This is the next screen! You can write information or load posts from your API here.</p>
+
+    <img src="img/back.png" class="back" alt="Back" onclick="showSection('welcome-section')">
+  </div>
+</div>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
 
 </body>
-
-<div class="welcome">
-    <h1>Welcome to Makiiverse!</h1>
-</div>
-
-
-<img src="img/welcome1.png" class="word">
-
-<div class="texto">
-<h1>makiiverse will be funny server<h1>
-</div>
-
-<a href="https://yosmakii99.github.io/miive/">
-<img src="img/Next.png" class="next">
-</a>
-
-<div><style>
-  .base {
-    box-shadow: 20px 20px 20px rgba(70, 70, 70, 0.5); /* desplazamiento x, desplazamiento y, difuminado, color */
-    border-radius: 15px; /* opcional, bordes redondeados */
-    border-bottom: 15px;
-    border-top: 150px;
-  }
-  
-</style>
-
-<a href="javascript:window.close();">
-<img src="img/back.png" class="back">
-</a>
-<style>
-  @font-face {
-    font-family: 'MiiverseSymbols-Regular';
-    src: url('font/MiiverseSymbols-Regular.ttf') format('truetype');
-  }
-  
-  .MiiverseSymbols-Regular {
-    font-family: 'MiiverseSymbols-Regular';
-  }
-  </style>
-</div>
-
-
+</html>
