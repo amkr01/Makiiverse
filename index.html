@@ -27,13 +27,13 @@ body {
   display: block;
 }
 
-/* Tarjeta (más pequeña y centrada arriba) */
+/* Tarjeta */
 .miiverse-card {
   background: #ffffff;
   border-radius: 25px;
   box-shadow: 0px 10px 25px rgba(0,0,0,0.18);
-  width: 520px;      /* antes 600px */
-  height: 300px;     /* antes 340px */
+  width: 520px;
+  height: 300px;
   padding: 25px;
   margin: 20px auto 0 auto;
   text-align: center;
@@ -56,11 +56,11 @@ body {
   padding: 0 10px;
 }
 
-/* Icono dentro de la tarjeta */
+/* Icono del globo */
 .icon {
   display: block;
-  margin: 20px auto 0 auto;
-  width: 300px; /* un poco más pequeño */
+  margin: 15px auto 0 auto;
+  width: 300px; /* aumentado (antes 210px) */
 }
 
 /* Botones */
@@ -68,23 +68,23 @@ body {
   width: 130px;
   cursor: pointer;
   position: fixed;
-  bottom: 35px; /* nivelado con la parte inferior de la pantalla */
+  bottom: 35px;
 }
 
-/* En los extremos de la pantalla como en Miiverse original */
+/* Más hacia los bordes */
 .next {
-  right: 60px;
+  right: 20px; /* antes 60px */
 }
 
 .exit {
-  left: 60px;
+  left: 20px; /* antes 60px */
 }
 
 .back {
-  right: 60px;
+  right: 20px;
 }
 
-/* Ajuste extra para pantallas más pequeñas (opcional) */
+/* Responsive */
 @media (max-width: 720px) {
   .miiverse-card {
     width: 90%;
