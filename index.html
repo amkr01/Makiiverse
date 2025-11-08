@@ -19,15 +19,9 @@ body {
   overflow: hidden;
 }
 
-/* Secciones */
-.section {
-  display: none;
-}
-.section.active {
-  display: block;
-}
+.section { display: none; }
+.section.active { display: block; }
 
-/* Tarjeta */
 .miiverse-card {
   background: #ffffff;
   border-radius: 25px;
@@ -40,7 +34,6 @@ body {
   position: relative;
 }
 
-/* Título */
 .miiverse-card h1 {
   color: #2cb32c;
   font-size: 26px;
@@ -48,7 +41,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* Texto */
 .miiverse-card p {
   font-size: 18px;
   line-height: 1.5em;
@@ -56,41 +48,30 @@ body {
   padding: 0 10px;
 }
 
-/* Icono del globo */
 .icon {
   display: block;
   margin: 15px auto 0 auto;
-  width: 300px;
+  width: 250px;
 }
 
-/* Botones */
+/* 🔽 Forzamos los botones a moverse 10px más abajo */
 .next, .back, .exit {
   width: 130px;
   cursor: pointer;
-  position: fixed;
-  bottom: 25px; /* 🔻 antes 35px — bajado 10px */
+  position: fixed !important;
+  bottom: 15px !important; /* antes 25px → bajado 10px exactos */
+  z-index: 9999;
 }
 
-.next {
-  right: 10px;
-}
+.next { right: 12px; }
+.exit { left: 12px; }
+.back { right: 12px; }
 
-.exit {
-  left: 10px;
-}
-
-.back {
-  right: 10px;
-}
-
-/* Responsive */
 @media (max-width: 720px) {
-  .miiverse-card {
-    width: 90%;
-    height: auto;
-  }
+  .miiverse-card { width: 90%; height: auto; }
 }
 </style>
+
 </head>
 
 <body>
