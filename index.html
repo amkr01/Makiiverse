@@ -27,20 +27,20 @@ body {
   display: block;
 }
 
-/* Tarjeta (subida más arriba) */
+/* Tarjeta (más pequeña y centrada arriba) */
 .miiverse-card {
   background: #ffffff;
   border-radius: 25px;
   box-shadow: 0px 10px 25px rgba(0,0,0,0.18);
-  width: 600px;
-  height: 340px;
-  padding: 30px;
-  margin: 15px auto 0 auto; /* antes 55px → ahora más arriba */
+  width: 520px;      /* antes 600px */
+  height: 300px;     /* antes 340px */
+  padding: 25px;
+  margin: 20px auto 0 auto;
   text-align: center;
   position: relative;
 }
 
-/* Texto dentro del recuadro */
+/* Título */
 .miiverse-card h1 {
   color: #2cb32c;
   font-size: 26px;
@@ -48,43 +48,48 @@ body {
   margin-bottom: 15px;
 }
 
+/* Texto */
 .miiverse-card p {
-  font-size: 19px;
+  font-size: 18px;
   line-height: 1.5em;
   color: #333333;
   padding: 0 10px;
 }
 
-/* Icono dentro del recuadro */
+/* Icono dentro de la tarjeta */
 .icon {
   display: block;
   margin: 20px auto 0 auto;
-  width: 400px;
+  width: 300px; /* un poco más pequeño */
 }
 
 /* Botones */
 .next, .back, .exit {
   width: 130px;
   cursor: pointer;
+  position: fixed;
+  bottom: 35px; /* nivelado con la parte inferior de la pantalla */
 }
 
-/* Posición tipo Wii U (más arriba y más centrados) */
+/* En los extremos de la pantalla como en Miiverse original */
 .next {
-  position: fixed;
-  right: 95px;   /* antes 70px */
-  bottom: 60px;  /* antes 35px */
+  right: 60px;
 }
 
 .exit {
-  position: fixed;
-  left: 95px;    /* antes 70px */
-  bottom: 60px;  /* antes 35px */
+  left: 60px;
 }
 
 .back {
-  position: fixed;
-  right: 95px;
-  bottom: 60px;
+  right: 60px;
+}
+
+/* Ajuste extra para pantallas más pequeñas (opcional) */
+@media (max-width: 720px) {
+  .miiverse-card {
+    width: 90%;
+    height: auto;
+  }
 }
 </style>
 </head>
@@ -102,6 +107,7 @@ body {
     <img src="img/welcome1.png" class="icon" alt="Miis around Earth">
   </div>
 
+  <!-- Botones fuera de la tarjeta -->
   <a href="javascript:window.close();">
     <img src="img/exit.png" class="exit" alt="Exit">
   </a>
