@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Makiiverse</title>
 
-<style>
+<style type="text/css">
 body {
   background-image: url('background.png');
   background-size: cover;
-  font-family: 'Lilita One', sans-serif;
+  background-color: #ffffff;
+  font-family: 'Lilita One', Arial, sans-serif;
   text-align: center;
-  color: #222;
+  color: #222222;
 }
 
 .section {
@@ -20,18 +21,12 @@ body {
 
 .section.active {
   display: block;
-  animation: fade 0.3s ease;
-}
-
-@keyframes fade {
-  from { opacity: 0; transform: scale(0.98); }
-  to { opacity: 1; transform: scale(1); }
 }
 
 .miiverse-card {
-  background: white;
+  background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
   width: 950px;
   height: 550px;
   max-width: 95%;
@@ -43,41 +38,40 @@ body {
 
 .next, .back {
   width: 150px;
-  transition: 0.2s;
-}
-
-.next:hover, .back:hover {
-  transform: scale(1.05);
+  cursor: pointer;
 }
 </style>
 </head>
 
 <body>
 
-<!-- 🔹 Sección 1 -->
+<!-- Pantalla 1 -->
 <div id="welcome-section" class="section active">
   <div class="miiverse-card">
     <h1>Welcome to Makiiverse!</h1>
-    <img src="img/welcome1.png" class="word">
-    <h2>Makiiverse will be a fun server</h2>
-    <img src="img/Next.png" class="next" alt="Next" onclick="showSection('info-section')">
+    <img src="img/welcome1.png" alt="Welcome" class="word">
+    <h2>Makiiverse will be a fun server!</h2>
+    <img src="img/Next.png" alt="Next" class="next" onclick="showSection('info-section')">
   </div>
 </div>
 
-<!-- 🔹 Sección 2 -->
+<!-- Pantalla 2 -->
 <div id="info-section" class="section">
   <div class="miiverse-card">
     <h1>About Makiiverse</h1>
-    <p>This is the next screen! You can write information or load posts from your API here.</p>
-
-    <img src="img/back.png" class="back" alt="Back" onclick="showSection('welcome-section')">
+    <p>This is the next screen! You can add more content or connect to your API here.</p>
+    <img src="img/back.png" alt="Back" class="back" onclick="showSection('welcome-section')">
   </div>
 </div>
 
-<script>
+<script type="text/javascript">
+// Código compatible con Wii U
 function showSection(id) {
-  document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+  var sections = document.getElementsByClassName('section');
+  for (var i = 0; i < sections.length; i++) {
+    sections[i].className = 'section';
+  }
+  document.getElementById(id).className = 'section active';
 }
 </script>
 
