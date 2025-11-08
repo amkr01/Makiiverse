@@ -23,20 +23,19 @@ body {
 .section {
   display: none;
 }
-
 .section.active {
   display: block;
 }
 
-/* Tarjeta central estilo Miiverse */
+/* Tarjeta central (ligeramente más pequeña y alta) */
 .miiverse-card {
   background: #ffffff;
   border-radius: 25px;
   box-shadow: 0px 10px 25px rgba(0,0,0,0.18);
-  width: 650px;
-  height: 380px;
-  padding: 40px;
-  margin: 40px auto 0 auto;
+  width: 600px;
+  height: 340px;
+  padding: 30px;
+  margin: 55px auto 0 auto;
   text-align: center;
   position: relative;
 }
@@ -44,13 +43,13 @@ body {
 /* Texto dentro del recuadro */
 .miiverse-card h1 {
   color: #2cb32c;
-  font-size: 28px;
+  font-size: 26px;
   margin-top: 5px;
   margin-bottom: 15px;
 }
 
 .miiverse-card p {
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1.5em;
   color: #333333;
   padding: 0 10px;
@@ -60,32 +59,32 @@ body {
 .icon {
   display: block;
   margin: 20px auto 0 auto;
-  width: 450px;
+  width: 390px;
 }
 
-/* Botones táctiles grandes */
+/* Botones táctiles */
 .next, .back, .exit {
-  width: 150px;
+  width: 130px;
   cursor: pointer;
 }
 
-/* Posiciones tipo Wii U */
+/* Posición tipo Wii U */
 .next {
   position: fixed;
-  right: 80px;
-  bottom: 45px;
-}
-
-.back {
-  position: fixed;
-  right: 80px;
-  bottom: 45px;
+  right: 70px;
+  bottom: 35px;
 }
 
 .exit {
   position: fixed;
-  left: 80px;
-  bottom: 45px;
+  left: 70px;
+  bottom: 35px;
+}
+
+.back {
+  position: fixed;
+  right: 70px;
+  bottom: 35px;
 }
 </style>
 </head>
