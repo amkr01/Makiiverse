@@ -1,9 +1,31 @@
-.cards-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2px; 
-    padding: 20px;
-    width: 240px;
-    position: relative;
-    top: -100px; /* movidas mucho más arriba */
+
+
+.back {
+ position: fixed;
+ margin-top: -105px;
+ margin-right: 700px;
+
+}
+
+
+.welcome {
+    font-family: "'NintendoNTLG", sans-serif;
+    color: #ff0015;  
+    margin-top: -590px;
+    margin-left: 590px;
+
+}
+
+
+.icon {
+ width: 120px;
+ margin-top: -800px;
+
+}
+
+
+.MiiverseSymbols-Regular {
+width: 250PX;
+margin-top: -60;
+margin-left: 1390px;
 }

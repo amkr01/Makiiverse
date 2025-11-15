@@ -1,156 +1,47 @@
-<!-- HEADER VERDE ESTILO MIIVERSE -->
+<!-- Header verde estilo Miiverse con dos colores -->
 <div class="miiverse-header"></div>
 
-<div class="cards-container" style="position:relative; width:200px; height:1000px;">
+<style>
+.miiverse-header {
+    width: 150%;
+    height: 100px;
+    margin-top: -10px;
 
-    <!-- TARJETA USER -->
-    <div class="card-user" style="position:absolute; top:-120px; left:0px;">
-        <div class="card-title">User Page</div>
-    </div>
+    /* Imagen del borde original */
+    background-image:
+        linear-gradient(to bottom, #73f073, #4fd855), /* <-- Tus dos colores */
+        url('img/album-image-us.png');
 
-    <!-- OTRAS TARJETAS UNIDAS -->
-    <div class="card card-standard" style="position:absolute; top:60px; left:0px;">
-        <div class="card-icon">a</div>
-        <div class="card-title">My Menu</div>
-    </div>
+    background-repeat: repeat-x;
+    background-size: auto 120px;
 
-    <div class="card card-standard" style="position:absolute; top:240px; left:0px;">
-        <div class="card-icon">c</div>
-        <div class="card-title">Communities</div>
-    </div>
+    background-blend-mode: multiply; /* Mezcla colores + imagen */
 
-    <div class="card card-standard" style="position:absolute; top:420px; left:0px;">
-        <div class="card-icon">m</div>
-        <div class="card-title">Messages</div>
-    </div>
-
-    <div class="card card-standard" style="position:absolute; top:600px; left:0px;">
-        <div class="card-icon">n</div>
-        <div class="card-title">Notifications</div>
-    </div>
-<!-- BOTÓN EXIT/Close -->
-<div class="card card-exit" style="position:absolute; top:780px; left:0px; 
-     width:200px; height:180px; 
-     background-color:#555555; /* gris oscuro */
-     border-bottom-right-radius:90px; /* esquina inferior derecha súper redonda */
-     box-shadow: 0 15px 30px rgba(0,0,0,0.6); 
-     display:flex; flex-direction:column; align-items:center; justify-content:center;
-     cursor:pointer;"
-     onclick="window.close();"> <!-- onclick debe ir aquí -->
-
-    <div class="card-icon" style="color:#6e6e6e; margin-bottom:6px;">x</div>
-    <div class="card-title" style="color:#a7a3a3;">Close</div>
-</div>
-
-
-
-
-
-
-<body style="background-image: url(background.png);"></body>
-
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.30);
+    position: relative;
+    z-index: 10;
+}
+</style>
 
 <style>
 @font-face {
-    font-family: "MiiverseIcons";
-    src: url("https://raw.githubusercontent.com/YosMakii99/project.io/main/font/MiiverseSymbols-Regular.ttf")
-         format("truetype");
+    font-family: 'MiiverseSymbols';
+    src: url('font/MiiverseSymbols-Regular.ttf') format('truetype');
 }
 
-.card-icon {
-    font-family: "MiiverseIcons";
-    font-size: 70px;
-    color: #555;
+.menu-icon {
+    font-family: 'MiiverseSymbols';
+    font-size: 48px; /* tamaño igual que Wii U */
+    color: #4CAF50;  /* verde original */
+    display: block;
+    margin: 25px 0;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+}
+
+.menu-container {
+    position: fixed;
+    top: 80px;
+    right: 25px;
+    text-align: center;
 }
 </style>
-
-
-
-<style>
-/* HEADER */
-.miiverse-header {
-    width: 100%;
-    height: 110px;
-    margin-top: -10px;
-    background-image: 
-        linear-gradient(to bottom, #6cff6c, #88ff8c),
-        url('img/album-image-us.png');
-    background-repeat: repeat-x;
-    background-size: auto 120px;
-    background-blend-mode: multiply;
-    box-shadow: 20px 20px 20px rgba(0,0,0,0.30);
-}
-
-.card, .card-standard, .card-user {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 180px;
-    background-color: #f0f0f0;
-    border-radius: 0;
-    cursor: pointer;
-    margin-bottom: 10px; 
-    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
-    /* QUITAR position:relative y left */
-}
-.card:hover, .card-user:hover {
-    background-color: #e6e6e6; 
-    box-shadow: 0 18px 35px rgba(0,0,0,0.65);
-}
-
-/* ICONOS DE TARJETA */
-.card-icon {
-    font-family: "MiiverseIcons";
-    font-size: 70px; 
-    color: #555555;
-    margin-bottom: 6px;
-    transition: color 0.2s ease;
-}
-
-/* TEXTO DE LA TARJETA */
-.card-title {
-    font-size: 28px;
-    font-weight: 600;
-    color: #555555; 
-    text-align: center;
-    transition: color 0.2s ease;
-}
-
-/* TARJETA SELECCIONADA */
-.card.selected .card-icon,
-.card.selected .card-title,
-.card-user.selected .card-title {
-    color: #4aeb4f; /* verde Miiverse */
-}
-
-/* TARJETA USER REDONDA */
-.card-user {
-    border-top-right-radius: 90px;  /* esquina súper redonda */
-    text-align: center;
-    line-height: 180px;
-}
-</style>
-
-
-
-<script>
-// JavaScript compatible Wii U (ES5)
-var cards = document.querySelectorAll('.card, .card-user');
-
-for (var i = 0; i < cards.length; i++) {
-    cards[i].addEventListener('click', function() {
-        for (var j = 0; j < cards.length; j++) {
-            cards[j].className = cards[j].className.replace(' selected','');
-        }
-        this.className += ' selected';
-    });
-}
-</script>
-
-
-
-
-
-

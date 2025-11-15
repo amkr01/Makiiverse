@@ -1,0 +1,123 @@
+<?php // index.php ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Makiiverse</title>
+
+<style type="text/css">
+body {
+  background-image: url('background.png');
+  background-size: cover;
+  background-color: #ffffff;
+  font-family: 'Lilita One', Arial, sans-serif;
+  text-align: center;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.section { display: none; }
+.section.active { display: block; }
+
+.miiverse-card {
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.18);
+  width: 520px;
+  height: 300px;
+  padding: 25px;
+  margin: 20px auto 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.miiverse-card h1 {
+  color: #2cb32c;
+  font-size: 26px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.miiverse-card p {
+  font-size: 18px;
+  line-height: 1.5em;
+  color: #333333;
+  padding: 0 10px;
+}
+
+.icon {
+  display: block;
+  margin: 15px auto 0 auto;
+  width: 250px;
+}
+
+.next, .back, .exit {
+  width: 130px;
+  cursor: pointer;
+  position: fixed !important;
+  bottom: 15px !important;
+  z-index: 9999;
+}
+
+.next { right: 12px; }
+.exit { left: 12px; }
+.back { left: 12px; }
+
+@media (max-width: 720px) {
+  .miiverse-card { width: 90%; height: auto; }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Pantalla 1 -->
+<div id="welcome-section" class="section active">
+  <div class="miiverse-card">
+    <h1>Welcome to Makiiverse!</h1>
+    <p>
+      Makiiverse is an online service that connects people from all over the world using Mii characters.<br><br>
+      Using Makiiverse, you can share your gaming experiences with the world in all kinds of ways!
+    </p>
+    <img src="img/welcome1.png" class="icon" alt="Miis around Earth">
+  </div>
+
+  <a href="javascript:window.close();">
+    <img src="img/exit.png" class="exit" alt="Exit">
+  </a>
+
+  <img src="img/Next.png" alt="Next" class="next" onclick="showSection('info-section')">
+</div>
+
+<!-- Pantalla 2 -->
+<div id="info-section" class="section">
+  <div class="miiverse-card">
+    <h1>This Miiverse was made by makii01</h1>
+    <p>But now this page is in development rn!</p>
+    <img src="img/mkisleep.png" alt="Maki Sleeping" class="icon">
+  </div>
+
+  <img src="img/back.png" alt="Back" class="back" onclick="showSection('welcome-section')">
+
+  <!-- Redirige a login.php -->
+  <a href="login.php"><img src="img/Next.png" alt="Next" class="next"></a>
+
+</div>
+
+<script type="text/javascript">
+function showSection(id) {
+  var sections = document.getElementsByClassName('section');
+  for (var i = 0; i < sections.length; i++) {
+    sections[i].className = 'section';
+  }
+  document.getElementById(id).className = 'section active';
+}
+</script>
+
+</body>
+</html>
