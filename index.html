@@ -45,8 +45,6 @@
     <div class="card-title" style="color:#a7a3a3;">Close</div>
 </div>
 
-
-
 <body style="background-image: url(background.png);"></body>
 
 
@@ -233,9 +231,82 @@ for (var i = 0; i < cards.length; i++) {
   width: 50px;
   margin: 8px;
 }
+ </style>
+
+ <img src="img/wiiu_logo.png" class="wiiu_miiverse">
+
+
+ <style class="wiiu_miiverse">
+ .wiiu_miiverse {
+ margin-left: 1350px;
+ margin-top: 50px;
+ width: 180px;
+
+}
+
+ </style>
+
+ <img src="img/new_chat.png" class="bar" alt="new communities">
+
+ <style>
+   
+  .bar {
+   margin-left: 250px;
+   margin-top: 100px;
+   width: 1000px;
+
+  }
+ </style>
+
+<style>
+/* Contenedor */
+.container {
+    position: relative;
+    width: 1500px; /* ancho suficiente para mover la tarjeta a la derecha */
+    height: 200px;
+}
+
+/* Tarjeta azul ligeramente más grande y con bordes suavizados */
+.card-filter {
+    position: absolute;
+    top: -55px;        /* ajustar vertical */
+    left: 1150px;      /* muy a la derecha */
+    width: 260px;      /* un poco más larga */
+    height: 55px;      /* un poco más alta */
+    background: #2879ac;    
+    background: -webkit-linear-gradient(top, #2388c7, #1E90FF); /* Safari antiguo */
+    background: -moz-linear-gradient(top, #2388c7, #1E90FF);    /* Firefox antiguo */
+    background: linear-gradient(to bottom, #2388c7, #1E90FF);    /* estándar */
+    border-radius: 8px;   /* bordes ligeramente redondeados */
+    text-align: center;
+    line-height: 60px;  
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+/* Triángulo apuntando hacia abajo */
+.card-filter::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -6px; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #ffffff; 
+}
 </style>
 </head>
+<body>
 
+<div class="container">
+    <div class="card-filter">
+        Filter
+    </div>
+</div>
 
+</body>
 
-
+</html>

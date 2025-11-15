@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <head><meta charset="UTF-8"></head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon/Icono_de_Mario_Kart_8.png" type="image/x-icon">
+    <link rel="stylesheet" href="ccs/swiper-bundle.main.ccs">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <title>My page</title>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Miiverse - My Page</title>
+  <img src="img/inter.png" class="interface">
+</head>
+<img src="img/MemoReal_00^r.bflim.png" class="white">
+<img src="img/miibase.gif" class="base"> 
+ <img src="img/img_unknown_MiiIcon.png" class="Mii">
+
+<style>
+  .Mii {
+    box-shadow: 10px 10px 10px rgba(70, 70, 70, 0.5); /* desplazamiento x, desplazamiento y, difuminado, color */
+    border-radius: 10px; /* opcional, bordes redondeados */
+  }
+  
+</style>
+
+<head>
+ <img src="img/user_pg.png" class="mii_page">
+ <img src="img/BT_inter.png" class="Activity_Feed">
+ <img src="img/BT_inter.png" class="Communities">
+ <img src="img/BT_inter.png" class="messages">
+ <img src="img/BT_inter.png" class="notifications">
+</head>
+
+<style>
+  .white {
+    box-shadow: 5px 5px 5px rgba(70, 70, 70, 0.5); /* desplazamiento x, desplazamiento y, difuminado, color */
+    border-radius: 5px; /* opcional, bordes redondeados */
+  }
+  
+</style>
+
+<style>
+  .Activity_Feed {
+    box-shadow: 10px 10px 20px rgba(70, 70, 70, 0.5); /* desplazamiento x, desplazamiento y, difuminado, color */
+    border-radius: 5px; /* opcional, bordes redondeados */
+  }
+</style>
+
+
+
+<style>
+  .Communities {
+    box-shadow: 20px 20px 20px rgba(70, 70, 70, 0.5); /* desplazamiento x, desplazamiento y, difuminado, color */
+    border-radius: 5px; /* opcional, bordes redondeados */
+  }
+  
+</style>
+
+<style>
+  .messages {
+    box-shadow: 10px 10px 20px rgba(70, 70, 70, 0.5); /* desplazamiento x, desplazamiento y, difuminado, color */
+    border-radius: 5px; /* opcional, bordes redondeados */
+  }
+  
+</style>
+
+<style>
+  .mii_page {
+    box-shadow: 10px 10px 20px rgba(70, 70, 70, 0.5); /* desplazamiento x, desplazamiento y, difuminado, color */
+    border-radius: 5px; /* opcional, bordes redondeados */
+  }
+  
+</style>
+
+<style>
+  .notifications {
+    box-shadow: 10px 10px 20px rgba(70, 70, 70, 0.5); /* desplazamiento x, desplazamiento y, difuminado, color */
+    border-radius: 10px; /* opcional, bordes redondeados */
+  }
+  
+</style>
+
+<body>
+
+  <div id="user-profile" style="display: none;">
+    <img id="user-mii" src="" alt="Tu Mii" style="width:100px;height:100px;"><br>
+    <h2 id="user-name"></h2>
+  </div>
+
+  <script type="module">
+    import { auth, db } from './firebase.js';
+    import { doc, getDoc } from "firebase/firestore";
+
+    auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        const userDoc = await getDoc(doc(db, "users", user.uid));
+        if (userDoc.exists()) {
+          const userData = userDoc.data();
+          document.getElementById('user-name').innerText = userData.username;
+          document.getElementById('user-mii').src = userData.miiImage || 'default_mii.png';
+          document.getElementById('user-profile').style.display = 'block';
+        } else {
+          console.log("No se encontró perfil para el usuario.");
+        }
+      } else {
+        console.log("No hay usuario logueado, redirigiendo a login...");
+        window.location.href = 'index.html'; // Manda al login si no hay sesión
+      }
+    });
+  </script>
+
+</body>
+</html>
