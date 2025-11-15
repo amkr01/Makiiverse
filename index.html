@@ -1,121 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- HEADER VERDE ESTILO MIIVERSE -->
+<div class="miiverse-header"></div>
 
-<title>Makiiverse</title>
+<div class="cards-container" style="position:relative; width:200px; height:1000px;">
 
-<style type="text/css">
-body {
-  background-image: url('background.png');
-  background-size: cover;
-  background-color: #ffffff;
-  font-family: 'Lilita One', Arial, sans-serif;
-  text-align: center;
-  color: #222222;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+    <!-- TARJETA USER -->
+    <div class="card-user" style="position:absolute; top:-120px; left:0px;">
+        <div class="card-title">User Page</div>
+    </div>
+
+    <!-- OTRAS TARJETAS UNIDAS -->
+    <div class="card card-standard" style="position:absolute; top:60px; left:0px;">
+        <div class="card-icon">a</div>
+        <div class="card-title">My Menu</div>
+    </div>
+
+    <div class="card card-standard" style="position:absolute; top:240px; left:0px;">
+        <div class="card-icon">c</div>
+        <div class="card-title">Communities</div>
+    </div>
+
+    <div class="card card-standard" style="position:absolute; top:420px; left:0px;">
+        <div class="card-icon">m</div>
+        <div class="card-title">Messages</div>
+    </div>
+
+    <div class="card card-standard" style="position:absolute; top:600px; left:0px;">
+        <div class="card-icon">n</div>
+        <div class="card-title">Notifications</div>
+    </div>
+<!-- BOTÓN EXIT/Close -->
+<div class="card card-exit" style="position:absolute; top:780px; left:0px; 
+     width:200px; height:180px; 
+     background-color:#555555; /* gris oscuro */
+     border-bottom-right-radius:90px; /* esquina inferior derecha súper redonda */
+     box-shadow: 0 15px 30px rgba(0,0,0,0.6); 
+     display:flex; flex-direction:column; align-items:center; justify-content:center;
+     cursor:pointer;"
+     onclick="window.close();"> <!-- onclick debe ir aquí -->
+
+    <div class="card-icon" style="color:#6e6e6e; margin-bottom:6px;">x</div>
+    <div class="card-title" style="color:#a7a3a3;">Close</div>
+</div>
+
+
+
+
+
+
+<body style="background-image: url(background.png);"></body>
+
+<style>
+/* HEADER */
+.miiverse-header {
+    width: 100%;
+    height: 110px;
+    margin-top: -10px;
+    background-image: 
+        linear-gradient(to bottom, #6cff6c, #88ff8c),
+        url('img/album-image-us.png');
+    background-repeat: repeat-x;
+    background-size: auto 120px;
+    background-blend-mode: multiply;
+    box-shadow: 20px 20px 20px rgba(0,0,0,0.30);
 }
 
-.section { display: none; }
-.section.active { display: block; }
-
-.miiverse-card {
-  background: #ffffff;
-  border-radius: 25px;
-  box-shadow: 0px 10px 25px rgba(0,0,0,0.18);
-  width: 520px;
-  height: 300px;
-  padding: 25px;
-  margin: 20px auto 0 auto;
-  text-align: center;
-  position: relative;
+/* FUENTE DE ICONOS */
+@font-face {
+    font-family: "MiiverseIcons";
+    src: url("/font/MiiverseSymbols-Regular.ttf") format("truetype");
 }
 
-.miiverse-card h1 {
-  color: #2cb32c;
-  font-size: 26px;
-  margin-top: 5px;
-  margin-bottom: 15px;
+.card, .card-standard, .card-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 180px;
+    background-color: #f0f0f0;
+    border-radius: 0;
+    cursor: pointer;
+    margin-bottom: 10px; 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+    /* QUITAR position:relative y left */
+}
+.card:hover, .card-user:hover {
+    background-color: #e6e6e6; 
+    box-shadow: 0 18px 35px rgba(0,0,0,0.65);
 }
 
-.miiverse-card p {
-  font-size: 18px;
-  line-height: 1.5em;
-  color: #333333;
-  padding: 0 10px;
+/* ICONOS DE TARJETA */
+.card-icon {
+    font-family: "MiiverseIcons";
+    font-size: 70px; 
+    color: #555555;
+    margin-bottom: 6px;
+    transition: color 0.2s ease;
 }
 
-.icon {
-  display: block;
-  margin: 15px auto 0 auto;
-  width: 250px;
+/* TEXTO DE LA TARJETA */
+.card-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #555555; 
+    text-align: center;
+    transition: color 0.2s ease;
 }
 
-/* 🔽 Botones */
-.next, .back, .exit {
-  width: 130px;
-  cursor: pointer;
-  position: fixed !important;
-  bottom: 15px !important;
-  z-index: 9999;
+/* TARJETA SELECCIONADA */
+.card.selected .card-icon,
+.card.selected .card-title,
+.card-user.selected .card-title {
+    color: #4aeb4f; /* verde Miiverse */
 }
 
-.next { right: 12px; }
-.exit { left: 12px; }
-.back { left: 12px; }
-
-@media (max-width: 720px) {
-  .miiverse-card { width: 90%; height: auto; }
+/* TARJETA USER REDONDA */
+.card-user {
+    border-top-right-radius: 90px;  /* esquina súper redonda */
+    text-align: center;
+    line-height: 180px;
 }
 </style>
 
-</head>
+<script>
+// JavaScript compatible Wii U (ES5)
+var cards = document.querySelectorAll('.card, .card-user');
 
-<body>
-
-<!-- Pantalla 1 -->
-<div id="welcome-section" class="section active">
-  <div class="miiverse-card">
-    <h1>Welcome to Makiiverse!</h1>
-    <p>
-      Makiiverse is an online service that connects people from all over the world using Mii characters.<br><br>
-      Using Makiiverse, you can share your gaming experiences with the world in all kinds of ways!
-    </p>
-    <img src="img/welcome1.png" class="icon" alt="Miis around Earth">
-  </div>
-
-  <!-- Botones -->
-  <a href="javascript:window.close();">
-    <img src="img/exit.png" class="exit" alt="Exit">
-  </a>
-  <img src="img/Next.png" alt="Next" class="next" onclick="showSection('info-section')">
-</div>
-
-<!-- Pantalla 2 -->
-<div id="info-section" class="section">
-  <div class="miiverse-card">
-    <h1>This Miiverse was made by makii01</h1>
-    <p>But now this page is in development rn!</p>
-    <img src="img/mkisleep.png" alt="Maki Sleeping" class="icon">
-  </div>
-
-  <!-- Botones -->
-  <img src="img/back.png" alt="Back" class="back" onclick="showSection('welcome-section')">
-  <img src="img/Next.png" alt="Next" class="next" onclick="showSection('welcome-section')">
-</div>
-
-<script type="text/javascript">
-function showSection(id) {
-  var sections = document.getElementsByClassName('section');
-  for (var i = 0; i < sections.length; i++) {
-    sections[i].className = 'section';
-  }
-  document.getElementById(id).className = 'section active';
+for (var i = 0; i < cards.length; i++) {
+    cards[i].addEventListener('click', function() {
+        for (var j = 0; j < cards.length; j++) {
+            cards[j].className = cards[j].className.replace(' selected','');
+        }
+        this.className += ' selected';
+    });
 }
 </script>
-
-</body>
-</html>
