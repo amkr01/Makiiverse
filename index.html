@@ -49,6 +49,23 @@
 
 <body style="background-image: url(background.png);"></body>
 
+
+<style>
+@font-face {
+    font-family: "MiiverseIcons";
+    src: url("https://raw.githubusercontent.com/YosMakii99/project.io/main/font/MiiverseSymbols-Regular.ttf")
+         format("truetype");
+}
+
+.card-icon {
+    font-family: "MiiverseIcons";
+    font-size: 70px;
+    color: #555;
+}
+</style>
+
+
+
 <style>
 /* HEADER */
 .miiverse-header {
@@ -62,12 +79,6 @@
     background-size: auto 120px;
     background-blend-mode: multiply;
     box-shadow: 20px 20px 20px rgba(0,0,0,0.30);
-}
-
-/* FUENTE DE ICONOS */
-@font-face {
-    font-family: "MiiverseIcons";
-    src: url("/font/MiiverseSymbols-Regular.ttf") format("truetype");
 }
 
 .card, .card-standard, .card-user {
@@ -122,6 +133,8 @@
 }
 </style>
 
+
+
 <script>
 // JavaScript compatible Wii U (ES5)
 var cards = document.querySelectorAll('.card, .card-user');
@@ -135,3 +148,9 @@ for (var i = 0; i < cards.length; i++) {
     });
 }
 </script>
+
+
+
+
+
+
