@@ -1,14 +1,47 @@
-.cards-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2px; 
-    padding: 20px;
-    width: 240px;
-    position: relative;
-    top: -100px; /* movidas mucho más arriba */
+
+.mk8 {
+ width: 150px;
+ margin-left: 200px;
+ margin-top: -1130px;
+ border-radius: 25px;
+ box-shadow:0 10px 20px rgba(0,0,0,0.5);
 }
 
-.mk8{
-margin-left: 1000px;
+.amke01 {
+  margin-top: -1120px;
+  margin-left: 370px;
+  color: rgb(43, 43, 43);
+ font-family: "MiiverseFont";
+}
+
+.shantae_icon {
+ width: 150px;
+ margin-left: 890px;
+ margin-top: -1130px;
+ border-radius: 25px;
+ box-shadow:0 10px 20px rgba(0,0,0,0.5);
 
 }
+
+.shantae_title {
+  margin-left: 1090px;
+  color: rgb(43, 43, 43);
+ font-family: "MiiverseFont";
+ margin-top: -60px;
+}
+
+.squid_game_lol {
+  margin-top: -835px;
+  width: 150px;
+  margin-left: 200px;
+  border-radius: 25px;
+ box-shadow:0 10px 20px rgba(0,0,0,0.5);
+}
+
+.squid_game_lol_text {
+ margin-left: 500px;
+ font-family: "MiiverseFont";
+
+
+}
+
