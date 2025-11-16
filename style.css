@@ -63,6 +63,7 @@
 
 .mii_base {
  position: absolute;
+ position: relative;
   width: 65px;
   position: fixed;
   margin-left: -10px;
@@ -73,6 +74,7 @@
 
 .Mii {
  position: absolute;
+ position: relative;
   width: 65px;
   position: fixed;
   margin-left: -10px;
