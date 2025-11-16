@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="style.css">
 
 <meta charset="utf-8">
-
+<title>ミーバース</title>
 <!-- BARRA VERDE ESTILO MIIVERSE -->
 <div class="header-card"
 style="
@@ -20,15 +20,15 @@ style="
     font-weight:bold;
     color:#ffffff;
 ">
-    <!-- Puedes poner texto aquí -->
+    
 </div>
 
 
 
 
 <div class="cards-container" style="position:relative; width:200px; height:1200px;">
-
-    <!-- TARJETA USER (ligeramente más grande) -->
+  
+    
     <div class="card-user" style="
         position:absolute; 
         top:-10px;        /* antes -100 */
@@ -41,11 +41,14 @@ style="
         border-bottom-right-radius:10px;
         box-shadow:0 0px 20px rgba(0,0,0,0.5);
         display:flex; flex-direction:column; justify-content:center; align-items:center;
+        
     ">
-        <div class="card-title">User Page</div>
+        <div class="card-title-user">User Page</div>
+        <img src="img/dummy_base.png" class="mii_base">
+        <img src="mii/img_unknown_MiiIcon.png" class="Mii">
     </div>
 
-    <!-- MY MENU -->
+   
     <div class="card card-standard" style="
         position:absolute; 
         top:130px;     /* antes 50px */
@@ -139,6 +142,19 @@ style="
 
 }
 
+.card-title-user {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 85px;
+    color: #555555; 
+    text-align: center;
+    transition: color 0.2s ease;
+    font-family: "MiiverseFont";
+    
+
+}
+
+
 .card-icon {
     font-family: "MiiverseIcons";
     font-size:66px; /* antes 52/70 */
@@ -154,7 +170,7 @@ style="
 /* selected */
 .card.selected .card-icon,
 .card.selected .card-title,
-.card-user.selected .card-title {
+.selected .card-title-user {
     color:#4aeb4f;
 }
 </style>
@@ -233,8 +249,8 @@ style="
     font-family:'MiiverseSymbols';
     position:absolute; 
     top:-1px; 
-    left: 1150px;  
-    width:608px;  /* ← MÁS FLAQUITA (antes 380px) */
+    left: 1100px;  
+    width:708px;  /* ← MÁS FLAQUITA (antes 380px) */
     height:104px; 
     background-color: #e2dddd;
     background:#ffffff;
@@ -333,7 +349,7 @@ format("woff"); } .icon { font-family: "MiiverseSymbols"; font-size: 50px; displ
 /* TARJETA SELECCIONADA */
 .card.selected .card-icon,
 .card.selected .card-title,
-.card-user.selected .card-title {
+.card-user.selected .card-title .card-title-user {
     color: #4aeb4f; /* verde Miiverse */
 }
 
@@ -433,7 +449,7 @@ for (var i = 0; i < cards.length; i++) {
 /* Tarjeta azul ligeramente más grande y con bordes suavizados */
 .card-filter {
     position: absolute;
-    top: -935px;        /* ajustar vertical */
+    top: -938px;        /* ajustar vertical */
     left: 1230px;      /* muy a la derecha */
     width: 300px;      /* un poco más larga */
     height: 69px;      /* un poco más alta */
@@ -472,6 +488,11 @@ for (var i = 0; i < cards.length; i++) {
     </div>
 </div>
 
+<img src="img/commu/minecraft.png" class="MinecraftIcon">
+<div class="MinecraftText">
+  <h1>Minecraft</h1>
+</div>
+
 <img src="img/commu/splatoon_icon.png" class="squid_game_lol">
 
  <div class="squid_game_lol_text">
@@ -481,15 +502,18 @@ for (var i = 0; i < cards.length; i++) {
 <div>
     <img src="img/commu/shantae_icon.png" class="shantae_icon">
 </div>
-<img src="img/commu/mariokakas8.jpg" class="mk8">
 
- <div class="amke01">
+<div>
+ <img src="img/commu/mariokakas8.jpg" class="mk8">
+
+  <div class="amke01">
   <h1>Mario Kart 8</h1>
+ </div>
 </div>
-
 <div class="shantae_title">
   <h1>Shantae Half genie Hero</h1>
 </div>
+
 
 <style class="MiiverseFont">
 @font-face {

@@ -2,13 +2,13 @@
 .mk8 {
  width: 150px;
  margin-left: 200px;
- margin-top: -1130px;
+ margin-top: -350px;
  border-radius: 25px;
  box-shadow:0 10px 20px rgba(0,0,0,0.5);
 }
 
 .amke01 {
-  margin-top: -1120px;
+  margin-top: -320px;
   margin-left: 370px;
   color: rgb(43, 43, 43);
  font-family: "MiiverseFont";
@@ -16,8 +16,8 @@
 
 .shantae_icon {
  width: 150px;
- margin-left: 890px;
- margin-top: -1130px;
+ margin-left: 920px;
+ margin-top: -355px;
  border-radius: 25px;
  box-shadow:0 10px 20px rgba(0,0,0,0.5);
 
@@ -27,11 +27,11 @@
   margin-left: 1090px;
   color: rgb(43, 43, 43);
  font-family: "MiiverseFont";
- margin-top: -60px;
+ margin-top: -320px;
 }
 
 .squid_game_lol {
-  margin-top: -835px;
+  margin-top: -100px;
   width: 150px;
   margin-left: 200px;
   border-radius: 25px;
@@ -39,9 +39,44 @@
 }
 
 .squid_game_lol_text {
- margin-left: 500px;
+ margin-left: 380px;
+ margin-top: -120px;
  font-family: "MiiverseFont";
 
 
 }
 
+.MinecraftIcon {
+ margin-top: -820px;
+ margin-left: 920px;
+ border-radius: 25px;
+ box-shadow:0 10px 20px rgba(0,0,0,0.5);
+ width: 150px;
+ 
+}
+
+.MinecraftText {
+ margin-left: 1100px;
+ margin-top: -800px;
+ font-family: "MiiverseFont";
+}
+
+.mii_base {
+ position: absolute;
+  width: 65px;
+  position: fixed;
+  margin-left: -10px;
+  margin-top: -35px;
+  border-radius: 5px;
+ box-shadow:0 0px 5px rgba(0,0,0,0.5);
+}
+
+.Mii {
+ position: absolute;
+  width: 65px;
+  position: fixed;
+  margin-left: -10px;
+  margin-top: -35px;
+
+
+}
