@@ -1,5 +1,4 @@
-full-miiverse-files-main/main/font/miiverse-icons.css
-
+/* Iconos Miiverse */
 @font-face {
     font-family: 'MiiverseSymbols';
     src: url('MiiverseSymbols-Regular.woff2') format('woff2'),
@@ -9,11 +8,29 @@ full-miiverse-files-main/main/font/miiverse-icons.css
     font-style: normal;
 }
 
+/* Iconos del navegador Wii U (cursor, puntitos, flechas grandes, loader) */
+@font-face {
+    font-family: 'RWWidgets';
+    src: url('rw-widgets.woff2') format('woff2'),
+         url('rw-widgets.woff') format('woff'),
+         url('rw-widgets.ttf') format('truetype'),
+         url('rw-widgets.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Clase general */
 .miiverse-icon {
-    font-family: 'MiiverseSymbols';
+    font-family: 'MiiverseSymbols', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
-    speak: none;
     display: inline-block;
-    line-height: 1;
+}
+
+/* Clase para los cursores del Wii U */
+.wiiu-icon {
+    font-family: 'RWWidgets', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    display: inline-block;
 }
