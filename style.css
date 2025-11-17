@@ -73,42 +73,36 @@
  font-family: "MiiverseFont";
 }
 
+.separator1,
+.separator2,
+.separator3,
+.separator4 {
+    width: 640px;         /* ANCHO DEL SEPARADOR */
+    height: 0;            /* SIN ALTURA */
+    border-bottom: 7px dashed #aaaaaa;
+    border-radius: 40px;
+
+    position: absolute;   /* TODOS ABSOLUTOS */
+}
+
+/* Ajustes individuales */
 .separator1 {
- display: flex;
-  border-bottom: 6px dashed #aaaaaa;
-  padding: 90px 300px;
-  margin-top: -115px;
-  margin-left: 200px;
+    top: 810px;   /* AJUSTA SI REQUIERE */
+    left: 200px;
 }
 
 .separator2 {
- display: flex;
-  border-bottom: 6px dashed #aaaaaa;
-  padding: 95px 370px;
-  margin-top: -360px;
-  margin-left: 910px;
-   position: absolute;
+    top: 810px;
+    left: 910px;
 }
 
 .separator3 {
- display: flex;
-  border-bottom: 6px dashed #aaaaaa;
-  padding: 95px 310px;
-  margin-top: -110px;
-  margin-left: 200px;
-   position: absolute;
+    top: 570px;
+    left: 200px;
 }
 
 .separator4 {
- display: flex;
-  border-bottom: 6px dashed #aaaaaa;
-  padding: 95px 370px;
-  margin-top: -110px;
-  margin-left: 900px;
-   position: absolute;
+    top: 570px;
+    left: 900px;
 }
 
-.separator1, .separator2, .separator3, .separator4 {
-    pointer-events: none !important;
-    z-index: 1 !important;
-}
