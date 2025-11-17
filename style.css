@@ -106,26 +106,6 @@
     left: 900px;
 }
 
-/* Iconos Miiverse */
-@font-face {
-    font-family: 'MiiverseSymbols';
-    src: url('MiiverseSymbols-Regular.woff2') format('woff2'),
-         url('MiiverseSymbols-Regular.woff') format('woff'),
-         url('MiiverseSymbols-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Iconos del navegador Wii U (cursor, puntitos, flechas grandes, loader) */
-@font-face {
-    font-family: 'RWWidgets';
-    src: url('rw-widgets.woff2') format('woff2'),
-         url('rw-widgets.woff') format('woff'),
-         url('rw-widgets.ttf') format('truetype'),
-         url('rw-widgets.eot') format('eot');
-    font-weight: normal;
-    font-style: normal;
-}
 
 /* Clase general */
 .miiverse-icon {
@@ -144,13 +124,13 @@
 }
 
 @font-face {
-    font-family: "MiiverseSymbols";
-    src: url("MiiverseSymbols-Regular.woff2") format("woff2"),
-         url("MiiverseSymbols-Regular.woff") format("woff"),
-         url("MiiverseSymbols-Regular.ttf") format("truetype");
+    font-family: 'MiiverseSymbols';
+    src: url('https://github.com/amkr01/Makiiverse/raw/refs/heads/main/font/MiiverseSymbols-Regular.ttf?raw=1') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.card-icon {
-  font-family: 'MiiverseSymbols';
+.icon-test {
+    font-family: 'MiiverseSymbols';
+    font-size: 40px;
 }
-
