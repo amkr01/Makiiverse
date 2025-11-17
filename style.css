@@ -61,24 +61,3 @@
  font-family: "MiiverseFont";
 }
 
-.mii_base {
- position: absolute;
- position: relative;
-  width: 65px;
-  position: fixed;
-  margin-left: -10px;
-  margin-top: -35px;
-  border-radius: 5px;
- box-shadow:0 0px 5px rgba(0,0,0,0.5);
-}
-
-.Mii {
- position: absolute;
- position: relative;
-  width: 65px;
-  position: fixed;
-  margin-left: -10px;
-  margin-top: -35px;
-
-
-}
