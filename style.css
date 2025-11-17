@@ -79,7 +79,7 @@
 .separator4 {
     width: 640px;         /* ANCHO DEL SEPARADOR */
     height: 0;            /* SIN ALTURA */
-    border-bottom: 7px dashed #aaaaaa;
+    border-bottom: 5px dashed #aaaaaa;
     border-radius: 40px;
 
     position: absolute;   /* TODOS ABSOLUTOS */
