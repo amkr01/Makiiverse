@@ -149,3 +149,8 @@
          url("MiiverseSymbols-Regular.woff") format("woff"),
          url("MiiverseSymbols-Regular.ttf") format("truetype");
 }
+
+.card-icon {
+  font-family: 'MiiverseSymbols';
+}
+
