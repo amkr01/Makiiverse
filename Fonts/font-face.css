@@ -13,3 +13,10 @@
 .card-icon {
   font-family: 'MiiverseSymbols';
 }
+
+@font-face {
+  font-family: "MiiverseSymbols";
+  src: url("/font/MiiverseSymbols-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
